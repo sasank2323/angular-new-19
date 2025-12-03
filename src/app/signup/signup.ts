@@ -11,4 +11,14 @@ import { Component } from '@angular/core';
 })
 export class Signup {
 
+  x=20;
+  hide()
+  {
+    this.x=0;
+  }
+  show()
+  {
+    this.x=20;
+  }
+
 }
