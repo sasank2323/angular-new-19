@@ -40,4 +40,48 @@
     }
 }
 
- 
+@for (num of numbers; track num) {
+  <p>{{ num }}</p>
+}
+
+@for (user of users; track user.id; let i=$index) {
+    <p>{{ i }} -
+   {{ user.name }}
+}
+<!--  -->
+
+<p>Name: {{ employee.name }}</p>
+
+@for (skill of employee.skills; track $index) {
+  <p>Skill: {{ skill }}</p>
+}
+
+@for (p of products; track p.name) {
+  <p>{{ p.name }} - ₹{{ p.price }}</p>
+}
+
+@for (row of matrix; track $index) {
+  <div>
+    @for (col of row; track $index) {
+      <span>{{ col }} </span>
+    }
+  </div>
+}
+<!-- 
+
+ @for (key of Object.keys(department); track key) {
+  <p><b>{{ key.toUpperCase() }}</b></p>} -->
+<!-- 
+  @for (emp of department[key]; track $index) {
+    <p>{{ emp }}</p>
+  } -->
+
+
+@for (c of companies; track c.name) {
+  <p><b>{{ c.name }}</b></p>
+
+  @for (job of c.jobs; track $index) {
+    <p>- {{ job }}</p>
+  }
+}
+
