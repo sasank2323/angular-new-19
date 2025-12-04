@@ -5,7 +5,8 @@ import { Signup } from './signup/signup';
 
 @Component({
   selector: 'app-root',
-  imports: [Login,Signup],
+  standalone: true,
+  imports: [Login],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
