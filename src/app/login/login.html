@@ -1,8 +1,14 @@
 <h2>login ssss!</h2>
-<app-signup></app-signup>
+
 <!-- even thouigh  i imported sign up but login css only apply to login html this is local css ok  -->
 
 <h3>this is h3 tag</h3>
 <!-- way of accessing signal in html -->
 <h3>{{count()}}</h3>
 <h3>{{x}}</h3>
+
+@for(color of colors(); track $index){
+    <p>{{color}}</p>
+}
+
+<button (click)="increment()">increment</button>
