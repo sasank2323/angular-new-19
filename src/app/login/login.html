@@ -10,3 +10,7 @@
 
 
 <button (click)="increment()">increment</button>
+
+@for (item of list; track $index) {
+  <p>{{$index+1}} {{ item }}</p>
+}

@@ -15,7 +15,7 @@ export class Login {
   y=signal(20);
   z=computed(()=>this.x()*this.y());
   m=signal(0);
- 
+ list= ['Sasank','Ravi','Kiran','Vamsi'];
   increment(){
     this.x.set(this.x()+1);
     console.log(this.z());
