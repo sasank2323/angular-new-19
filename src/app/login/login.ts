@@ -1,4 +1,4 @@
-import { Component, signal,WritableSignal } from '@angular/core';
+import { Component, signal,WritableSignal,computed } from '@angular/core';
 import { Signup } from '../signup/signup';
 import { NgFor } from '@angular/common';
 
@@ -11,19 +11,13 @@ import { NgFor } from '@angular/common';
   styleUrl: './login.css',
 })
 export class Login {
-  count=signal(10);
-  colors = signal(['red', 'green', 'blue']);
-  x=10;
-ss: WritableSignal<number> = signal(5);
-
-  constructor() {   
-  this.count.set(this.count() + 1);
-  }
-
+  x=signal(10);
+  y=signal(20);
+  z=computed(()=>this.x()*this.y());
+ 
   increment(){
-   // this.count.set(this.count() + 1);
-   this.count.update(n => n + 1);
-   this.colors.update(cols => [...cols, 'yellow']);
+    this.x.set(this.x()+10);
+    console.log(this.z());
 
   }
 
