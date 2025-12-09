@@ -11,6 +11,6 @@
 
 <button (click)="increment()">increment</button>
 
-@for (item of list; track $index) {
-  <p>{{$index+1}} {{ item }}</p>
+@for (item of list; track list; let i=$index) {
+  <p>{{i+1}} {{ item }}</p>
 }
