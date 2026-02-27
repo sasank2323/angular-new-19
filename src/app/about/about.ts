@@ -14,8 +14,12 @@ export class About {
 
   }
 
+  // navigate() {
+  //   this.router.navigate(['/route-check', { id: 100, name: 'sasank', username: 'sasank' }]);
+  // }
+
   navigate() {
-    this.router.navigate(['/route-check', { id: 100, name: 'sasank', username: 'sasank' }]);
+    this.router.navigate(['/route-check'], { queryParams: { role: 'admin', id: 100, name: 'sasank', username: 'sasank' } });
   }
 
 }

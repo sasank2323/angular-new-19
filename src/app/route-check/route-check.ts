@@ -22,7 +22,23 @@ export class RouteCheck {
     this.id = this.route.snapshot.params['id'] || null;
     this.name = this.route.snapshot.params['name'] || null;
     this.username = this.route.snapshot.params['username'] || null;
+
+    this.route.queryParams.subscribe((params) => {
+      this.id = params['id'] || null;
+      this.name = params['name'] || null;
+      this.username = params['username'] || null;
+    });
+
+    //or 
+
+    this.route.data.subscribe((data) => {
+      this.id = data['id'] || null;
+      this.name = data['name'] || null;
+      this.username = data['username'] || null;
+    });
   }
+
+
 }
 
 
