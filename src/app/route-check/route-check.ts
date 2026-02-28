@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-route-check',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './route-check.html',
   styleUrl: './route-check.css',
 })
@@ -11,6 +12,7 @@ export class RouteCheck {
   id: string | null = null;
   name: string | null = null;
   username: string | null = null;
+  sasank = new FormControl('sasank');
   constructor(private route: ActivatedRoute) {
     // this.id = this.route.snapshot.params['id'] || null;
     // this.name = this.route.snapshot.params['name'] || null;
